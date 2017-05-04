@@ -15,7 +15,16 @@
 	<div class="listing" ng-repeat="hero in vm.heroes | filter: {name: vm.search}" ng-class="hero.group">
 		<div class="name">{{hero.name}}</div>
 		<div class="number">{{hero.number}}</div>
+		<button ng-click="vm.showHero(hero)">Show Image</button>
+		<div>	<img ng-src="{{hero.img}}" class="hero-image" ng-show="hero.selected"></div>
 	</div>
-	</div>s
+	</div>
+	<div>
+	<input type="text" ng-model="vm.newHero.name">
+	<input type="text" ng-model="vm.newHero.number">
+	<input type="text" ng-model="vm.newHero.group">
+	<input type="text" ng-model="vm.newHero.img">
+	<button ng-click="vm.addHero()">Create a Hero</button>
+	</div>
 </body>
 </html>

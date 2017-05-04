@@ -1,5 +1,6 @@
 body {
 	background-color: #3b3b3b;
+	color: white;
 }
 
 .logo {
@@ -11,13 +12,13 @@ body {
 }
 
 .name {
-	color: white;
+
 	font-size: 24px;
 	height: 20%;
 }
 
 .number {
-	color: white;
+	
 }
 
 .Marvel {
@@ -44,4 +45,8 @@ body {
 .wrapper {
 	display: flex;
 	flex-wrap: wrap;
+}
+
+.hero-image {
+	height: 100px;
 }

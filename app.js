@@ -63,4 +63,14 @@ angular
 
   function HeroesControllerFunction () {
     this.heroes = superheroList
+    this.showHero = function(hero) {
+      hero.selected? hero.selected = false : hero.selected = true
+    }
+    this.newHero = {}
+    this.addHero = function(){
+      let hero = this.newHero
+      this.heroes.push(hero)
+      this.newHero = {}
+      console.log("creating")
+    }
   }
