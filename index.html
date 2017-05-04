@@ -9,22 +9,22 @@
 </head>
 <body ng-controller="HeroesController as vm">
 	<div class="logo"></div>
-	<p>Search</p>
-	<input type="text" ng-model="vm.search">
+	<div class="searchbar"><p>Search</p> <input type="text" ng-model="vm.search"></div>
 	<div class="wrapper">
-	<div class="listing" ng-repeat="hero in vm.heroes | filter: {name: vm.search}" ng-class="hero.group">
-		<div class="name">{{hero.name}}</div>
-		<div class="number">{{hero.number}}</div>
-		<button ng-click="vm.showHero(hero)">Show Image</button>
-		<div>	<img ng-src="{{hero.img}}" class="hero-image" ng-show="hero.selected"></div>
+		<div class="listing" ng-repeat="hero in vm.heroes | filter: {name: vm.search}" ng-class="hero.group">
+			<div class="name">{{hero.name}}</div>
+			<div class="number">{{hero.number}}</div>
+			<button ng-click="vm.showHero(hero)">Show Image</button>
+			<div><img ng-src="{{hero.img}}" class="hero-image" ng-show="hero.selected"></div>
 	</div>
 	</div>
 	<div>
-	<input type="text" ng-model="vm.newHero.name">
-	<input type="text" ng-model="vm.newHero.number">
-	<input type="text" ng-model="vm.newHero.group">
-	<input type="text" ng-model="vm.newHero.img">
-	<button ng-click="vm.addHero()">Create a Hero</button>
+	<p>Create A Superhero</p>
+	<p>Name</p><input type="text" ng-model="vm.newHero.name">
+	<p>Phone Number</p><input type="text" ng-model="vm.newHero.number">
+	<p>Affiliation</p><input type="text" ng-model="vm.newHero.group">
+	<p>Image URL</p><input type="text" ng-model="vm.newHero.img">
+	<button ng-click="vm.addHero()">Create</button>
 	</div>
 </body>
 </html>

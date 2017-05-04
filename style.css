@@ -4,11 +4,13 @@ body {
 }
 
 .logo {
+	background-color: #d93832;
 	background-image: url("https://hrcaonline.org/Portals/0/EasyDNNnews/572/572superhero.png");
+	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
 	height: 200px;
-	width: 50%;
+	width: 100%;
 }
 
 .name {
@@ -48,5 +50,9 @@ body {
 }
 
 .hero-image {
+	height: 100px;
+}
+
+.searchbar {
 	height: 100px;
 }
